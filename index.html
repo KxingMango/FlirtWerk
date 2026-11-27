@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flirtwerk – Aus Funken werden Dates</title>
+<style>
+:root{--plum:#2A0E24;--plum2:#3D1835;--coral:#FF6B6B;--cream:#FFF3EA;--ink:#2A0E24;--soft:#E9CFDF}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--plum);color:var(--cream);font:16px/1.6 system-ui,sans-serif}
+h1,h2,h3{font-family:Georgia,serif;line-height:1.08}
+h2{font-size:clamp(32px,7vw,52px);margin-bottom:24px}
+.w{max-width:1040px;margin:auto;padding:0 20px}
+header .w{display:flex;justify-content:space-between;align-items:center;padding-top:16px;padding-bottom:16px;gap:12px}
+.logo{font:900 24px Georgia,serif}.logo span,.c{color:var(--coral)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;border-radius:99px;background:var(--coral);color:var(--ink);font:700 15px system-ui,sans-serif;text-decoration:none;border:0;cursor:pointer}
+section{padding:64px 0}
+.hero{padding-top:40px}
+.hero h1{font-size:clamp(52px,13vw,112px);font-weight:900}
+.hero p{font-size:19px;max-width:520px;margin:20px 0 28px;color:var(--soft)}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--plum2);border-radius:24px;padding:24px}
+.card h3{font-size:24px;margin-bottom:8px}
+.num{font:900 48px Georgia,serif;color:var(--coral)}
+.light{background:var(--cream);color:var(--ink)}
+.light .card{background:#fff}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 20px}
+.chips button{min-height:46px;padding:0 18px;border-radius:99px;border:2px solid var(--ink);background:transparent;color:var(--ink);font:600 15px system-ui,sans-serif;cursor:pointer}
+.chips button[aria-pressed=true]{background:var(--ink);color:var(--cream)}
+.ticket{background:var(--coral);border-radius:24px;padding:24px;border:2px dashed var(--ink);max-width:480px}
+.ticket strong{display:block;font:900 30px/1.2 Georgia,serif}
+.price{font:900 36px Georgia,serif;margin:8px 0}
+.hot{outline:3px solid var(--coral)}
+ul{padding-left:20px}
+details{border-bottom:1px solid #6A3A5E;padding:16px 0}summary{cursor:pointer;font-weight:700}
+footer{border-top:1px solid #6A3A5E;padding:32px 0;font-size:14px;color:var(--soft)}
+.legal{display:none;max-width:760px}.legal h2{font-size:34px;overflow-wrap:anywhere;hyphens:auto}.legal h3{margin:24px 0 8px}.legal p,.legal li{margin-bottom:8px}.note{border:2px dashed var(--coral);border-radius:16px;padding:14px;margin-bottom:20px}footer nav{display:flex;flex-wrap:wrap;gap:4px 18px}footer a,.legal a{color:var(--cream);display:inline-block;padding:8px 0}
+</style>
+</head>
+<body>
+<header><div class="w"><div class="logo">Flirt<span>werk</span></div><a class="btn" href="#bauen">Date bauen</a></div></header>
+<main>
+<section class="hero"><div class="w">
+<h1>Aus Funken<br>werden <span class="c">Dates.</span></h1>
+<p>Die Dating-App, die dich vom Bildschirm holt: wenige passende Menschen, ein gemeinsamer Plan und ein echtes Treffen. Ab 18. Bald in ganz Deutschland.</p>
+<a class="btn" href="#so">So funktioniert’s</a>
+</div></section>
+
+<section id="so"><div class="w"><h2>Das Flirtwerk-Prinzip</h2><div class="grid">
+<div class="card"><div class="num">5</div><h3>Menschen am Tag</h3><p>Ausgewählte Vorschläge, jeweils mit Begründung, warum es passen könnte.</p></div>
+<div class="card"><div class="num">1</div><h3>Gemeinsamer Bauplan</h3><p>Nach dem Match wählt ihr beide Aktivität und Zeit. Passt es, steht euer Date.</p></div>
+<div class="card"><div class="num">7</div><h3>Tage Funkenzeit</h3><p>Ein Match bleibt 7 Tage offen. Mit Date-Plan bleibt der Chat bestehen.</p></div>
+</div></div></section>
+
+<section class="light" id="bauen"><div class="w"><h2>Probier den Date-Bauplan</h2>
+<h3>Was?</h3><div class="chips" data-k="was"><button aria-pressed="true">Kaffee</button><button aria-pressed="false">Spaziergang</button><button aria-pressed="false">Minigolf</button><button aria-pressed="false">Museum</button></div>
+<h3>Wann?</h3><div class="chips" data-k="wann"><button aria-pressed="true">Freitagabend</button><button aria-pressed="false">Samstag</button><button aria-pressed="false">Sonntag</button></div>
+<div class="ticket" aria-live="polite">Euer Date-Ticket<strong id="ticket">Kaffee am Freitagabend</strong>An einem öffentlichen Ort. Nur eine Vorschau.</div>
+</div></section>
+
+<section><div class="w"><h2>Sicherheit kostet nichts</h2><p style="margin-bottom:20px;color:var(--soft)">Das ist für den Start geplant:</p><div class="grid">
+<div class="card"><h3>Geprüfte Profile</h3><p>Altersprüfung und Foto-Verifizierung.</p></div>
+<div class="card"><h3>Schutz im Chat</h3><p>Melden, Blockieren und Warnungen vor Betrug und unerwünschten Nacktbildern.</p></div>
+<div class="card"><h3>Deine Kontrolle</h3><p>Genauer Standort bleibt verborgen. Profil pausieren oder löschen.</p></div>
+<div class="card"><h3>Date teilen</h3><p>Sag einer Vertrauensperson, wann und wo du dich triffst.</p></div>
+</div></div></section>
+
+<section class="light"><div class="w"><h2>Geplante Abos</h2><div class="grid">
+<div class="card"><h3>Gratis</h3><div class="price">0 €</div><ul><li>5 Vorschläge am Tag</li><li>Matches und Chat</li><li>Date-Bauplan</li></ul></div>
+<div class="card hot"><h3>Plus</h3><div class="price">9,99 €</div><p>pro Monat</p><ul><li>Mehr Filter</li><li>Entscheidung zurücknehmen</li><li>Werbefrei</li></ul></div>
+<div class="card"><h3>Premium</h3><div class="price">19,99 €</div><p>pro Monat</p><ul><li>Alles aus Plus</li><li>Sehen, wer dich mag</li><li>Unsichtbar-Modus</li></ul></div>
+</div></div></section>
+
+<section><div class="w"><h2>Fragen</h2>
+<details><summary>Wann startet Flirtwerk?</summary><p>Geplant in ganz Deutschland. Der Starttermin wird noch bekannt gegeben.</p></details>
+<details><summary>Kann ich mich schon anmelden?</summary><p>Noch nicht. Die Anmeldung ist noch nicht freigeschaltet.</p></details>
+<details><summary>Wer darf mitmachen?</summary><p>Nur Erwachsene ab 18 Jahren.</p></details>
+<details><summary>Was passiert nach 7 Tagen?</summary><p>Ohne Date-Plan schließt sich das Match. So bleibt Platz für Menschen, die sich wirklich treffen wollen.</p></details>
+</div></section>
+</main>
+<section class="legal w" id="impressum"><a href="#start">← Zur Startseite</a><h2>Impressum</h2><h3>Angaben gemäß § 5 DDG</h3><p>Jannick Bernatzki<br>Münzstraße 10<br>56068 Koblenz<br>Deutschland</p><h3>Kontakt</h3><p>E-Mail: jannick@fn.de</p><h3>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h3><p>Jannick Bernatzki</p><p>Stand: November 2026</p></section>
+<section class="legal w" id="datenschutz"><a href="#start">← Zur Startseite</a><h2>Datenschutz: Website</h2><div class="note"><b>Entwurf.</b> Vor der Veröffentlichung rechtlich prüfen.</div><h3>Verantwortlich</h3><p>Jannick Bernatzki, Münzstraße 10, 56068 Koblenz, jannick@fn.de</p><h3>Hosting durch Netlify</h3><p>Diese Website wird bei Netlify, Inc., 101 2nd Street, San Francisco, CA 94105, USA, gehostet (privacy@netlify.com). Beim Aufruf verarbeitet Netlify technische Daten wie IP-Adresse, Zeitpunkt, aufgerufene Adresse, verweisende Seite und Browserangaben, um die Website sicher auszuliefern. Rechtsgrundlage ist unser berechtigtes Interesse an einem sicheren und zuverlässigen Betrieb (Art. 6 Abs. 1 lit. f DSGVO).</p><p>Netlify ist auf Grundlage seiner Vereinbarung zur Auftragsverarbeitung (Art. 28 DSGVO) tätig. Dabei werden Daten in die USA übermittelt. Netlify gibt an, nach dem EU-U.S. Data Privacy Framework zertifiziert zu sein; ersatzweise gelten die EU-Standardvertragsklauseln.</p><p>Speicherdauer nach Angaben von Netlify: Zugriffsprotokolle 30 Tage direkt verfügbar und bis zu 13 Monate archiviert; Sicherheits- und Missbrauchsprotokolle 365 Tage direkt verfügbar und bis zu 6 Jahre archiviert. Mehr: <a href="https://www.netlify.com/privacy/">Datenschutzhinweise von Netlify</a>.</p><h3>Cookies und Analyse</h3><p>Der Code dieser Seite setzt keine Cookies, nutzt keine Analyse- oder Werbedienste und lädt keine externen Schriften.</p><h3>Kontakt per E-Mail</h3><p>Wir verarbeiten deine Angaben, um die Anfrage zu beantworten (Art. 6 Abs. 1 lit. b oder f DSGVO), und löschen sie, wenn sie nicht mehr benötigt werden und keine Aufbewahrungspflicht besteht.</p><h3>Deine Rechte</h3><p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch (Art. 15–21 DSGVO). Einwilligungen kannst du jederzeit für die Zukunft widerrufen. Du kannst dich bei einer Datenschutz-Aufsichtsbehörde beschweren (Art. 77 DSGVO).</p><p><a href="#app-datenschutz">Datenschutz der geplanten App</a></p><p>Stand: November 2026</p></section>
+<section class="legal w" id="app-datenschutz"><a href="#start">← Zur Startseite</a><h2>Datenschutz: App (geplant)</h2><div class="note"><b>Entwurf.</b> Vor der Veröffentlichung rechtlich prüfen und offene [Felder] ergänzen.</div><p>Die App ist noch nicht verfügbar. Diese Angaben müssen zur fertigen Technik passen.</p><h3>Verantwortlich</h3><p>Jannick Bernatzki, Münzstraße 10, 56068 Koblenz, jannick@fn.de<br>Datenschutzbeauftragte Person: [Kontakt, falls Pflicht]</p><h3>Daten, Zwecke und Rechtsgrundlagen</h3><ul><li>Konto und Profil (E-Mail, Geburtsdatum, Fotos, Angaben): Vertrag, Art. 6 Abs. 1 lit. b</li><li>Sensible Angaben, etwa zu sexueller Orientierung, Religion oder Gesundheit: nur mit ausdrücklicher Einwilligung, Art. 9 Abs. 2 lit. a</li><li>Matches, Chats und Date-Pläne: Vertrag</li><li>Ungefährer Standort für Vorschläge: Einwilligung</li><li>Alters- und Foto-Prüfung, bei biometrischen Daten ausdrückliche Einwilligung: Anbieter [Name]</li><li>Betrugs- und Missbrauchsschutz, Meldungen: berechtigtes Interesse oder rechtliche Pflicht; für sensible Daten [Grundlage nach Art. 9 prüfen]</li><li>Zahlungen: Vertrag, Anbieter [Name]</li></ul><h3>Vorschläge</h3><p>Vorschläge werden automatisch anhand von Altersbereich, Entfernung, Interessen und Beziehungswunsch sortiert. Je mehr davon übereinstimmt, desto eher wird ein Profil vorgeschlagen.</p><h3>Empfänger</h3><p>Andere Mitglieder sehen deine Profilangaben. Dienstleister: [Hosting, E-Mail, Prüfung, Zahlung]. Drittländer und Garantien: [Angaben]. Wir verkaufen keine Daten und geben keine sensiblen Daten zu Werbezwecken weiter.</p><h3>Speicherdauer</h3><p>Konto und Chats: bis zur Kontolöschung. Prüfdaten: Löschung direkt nach der Prüfung. Meldungen: 6 Monate nach Abschluss. Rechnungen: gesetzliche Aufbewahrungsfristen.</p><h3>Deine Rechte</h3><p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch (Art. 15–21 DSGVO). Einwilligungen kannst du jederzeit für die Zukunft widerrufen. Du kannst dich bei einer Datenschutz-Aufsichtsbehörde beschweren (Art. 77 DSGVO).</p><p>Stand: November 2026</p></section>
+<section class="legal w" id="agb"><a href="#start">← Zur Startseite</a><h2>Allgemeine Geschäftsbedingungen</h2><div class="note"><b>Entwurf.</b> Vor der Veröffentlichung rechtlich prüfen.</div><h3>1. Anbieter und Geltung</h3><p>Diese Bedingungen gelten für die Nutzung von Flirtwerk, angeboten von Jannick Bernatzki, Münzstraße 10, 56068 Koblenz, in Deutschland.</p><h3>2. Teilnahme</h3><p>Nur volljährige Personen. Ein Konto je Person, mit wahren Angaben und eigenen Fotos. Zugangsdaten sind geheim zu halten.</p><h3>3. Leistung</h3><p>Flirtwerk vermittelt Kontakte. Ein Match, ein Treffen oder eine Beziehung wird nicht garantiert. Matches ohne Date-Plan schließen sich nach 7 Tagen.</p><h3>4. Abos</h3><p>Preise (inklusive gesetzlicher Steuern), Laufzeit und Verlängerung werden vor der Bestellung angezeigt. Plus: 9,99 € pro Monat, Premium: 19,99 € pro Monat. Abos laufen einen Monat, verlängern sich monatlich und sind jederzeit zum Ende des laufenden Monats kündbar.</p><h3>5. Verhalten und Inhalte</h3><p>Es gelten die <a href="#regeln">Community-Regeln</a>. Du behältst die Rechte an deinen Inhalten und erlaubst uns, sie zum Betrieb des Dienstes zu speichern und anzuzeigen.</p><h3>6. Sperren und Beschwerden</h3><p>Bei Verstößen können wir Inhalte entfernen oder Konten angemessen einschränken. Wir nennen den Grund, soweit rechtlich zulässig. Beschwerden an jannick@fn.de.</p><h3>7. Kündigung</h3><p>Du kannst dein Konto jederzeit löschen. Für Abos gilt <a href="#kuendigen">Kündigung</a>. Das Recht zur Kündigung aus wichtigem Grund bleibt unberührt.</p><h3>8. Haftung</h3><p>Wir haften unbeschränkt bei Vorsatz, grober Fahrlässigkeit und Verletzung von Leben, Körper oder Gesundheit. Bei leicht fahrlässiger Verletzung wesentlicher Vertragspflichten haften wir für den vorhersehbaren, typischen Schaden. Gesetzliche Haftung bleibt unberührt.</p><h3>9. Schluss</h3><p>Es gilt deutsches Recht. Zwingende Verbraucherschutzvorschriften bleiben unberührt.</p><p>Stand: November 2026</p></section>
+<section class="legal w" id="widerruf"><a href="#start">← Zur Startseite</a><h2>Widerrufsbelehrung</h2><div class="note"><b>Entwurf.</b> Vor der Veröffentlichung rechtlich prüfen und offene [Felder] ergänzen.</div><h3>Widerrufsrecht</h3><p>Du hast das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen. Die Frist beträgt vierzehn Tage ab Vertragsschluss.</p><p>Dazu musst du uns (Jannick Bernatzki, Münzstraße 10, 56068 Koblenz, jannick@fn.de) mit einer eindeutigen Erklärung informieren, z. B. per Brief oder E-Mail. Du kannst auch die Funktion „Vertrag widerrufen“ am Ende jeder Seite, sobald Verträge buchbar sind nutzen; wir bestätigen den Eingang unverzüglich per E-Mail. Zur Fristwahrung genügt die rechtzeitige Absendung.</p><h3>Folgen</h3><p>Wir erstatten alle erhaltenen Zahlungen unverzüglich, spätestens binnen vierzehn Tagen ab Eingang des Widerrufs, mit demselben Zahlungsmittel und ohne Entgelt. Hast du verlangt, dass die Leistung während der Frist beginnt, zahlst du einen angemessenen Anteil für die bis zum Widerruf erbrachte Leistung.</p><h3>Muster-Formular</h3><p>An Jannick Bernatzki, Münzstraße 10, 56068 Koblenz, jannick@fn.de: Hiermit widerrufe ich den Vertrag über [Leistung], bestellt am [Datum]. Name, Anschrift, Datum.</p><p><b>Aktuell können keine Verträge abgeschlossen werden.</b></p><p>Stand: November 2026</p></section>
+<section class="legal w" id="kuendigen"><a href="#start">← Zur Startseite</a><h2>Abo kündigen</h2><div class="note"><b>Entwurf.</b> Vor der Veröffentlichung rechtlich prüfen.</div><p><b>Aktuell sind keine Abos buchbar.</b></p><p>Vor dem Start muss hier eine funktionierende Schaltfläche „Verträge hier kündigen“ mit Bestätigungsseite („jetzt kündigen“) und automatischer Eingangsbestätigung eingebaut werden (§ 312k BGB).</p><p>Stand: November 2026</p></section>
+<section class="legal w" id="regeln"><a href="#start">← Zur Startseite</a><h2>Community-Regeln</h2><div class="note"><b>Entwurf.</b> Vor der Veröffentlichung rechtlich prüfen.</div><ul><li>Nur ab 18.</li><li>Sei ehrlich: eigene Fotos, wahre Angaben.</li><li>Respektiere ein Nein.</li><li>Keine Belästigung, Drohungen, Hass oder Diskriminierung.</li><li>Keine unerwünschten sexuellen Inhalte.</li><li>Kein Betrug, keine Werbung, keine Geldbitten.</li><li>Keine privaten Daten oder Chats anderer ohne Erlaubnis verbreiten.</li></ul><h3>Melden</h3><p>Verstöße an jannick@fn.de. Wir prüfen Meldungen, informieren über die Entscheidung und ermöglichen Widerspruch.</p><p>Stand: November 2026</p></section>
+<section class="legal w" id="sicherheit"><a href="#start">← Zur Startseite</a><h2>Sicher daten</h2><div class="note"><b>Entwurf.</b> Vor der Veröffentlichung rechtlich prüfen.</div><ul><li>Triff dich an einem öffentlichen Ort.</li><li>Sag einer Vertrauensperson, wo du bist.</li><li>Organisiere An- und Abreise selbst.</li><li>Schick niemandem Geld oder Codes.</li><li>Du darfst jederzeit gehen.</li><li>Im Notfall: 110.</li></ul><p>Stand: November 2026</p></section>
+<footer><div class="w"><nav aria-label="Rechtliches"><a href="#impressum">Impressum</a><a href="#datenschutz">Datenschutz</a><a href="#agb">AGB</a><a href="#widerruf">Widerruf</a><a href="#kuendigen">Verträge hier kündigen</a><a href="#regeln">Regeln</a><a href="#sicherheit">Sicherheit</a></nav></div></footer>
+<script>
+function route(){const id=location.hash.slice(1);const el=document.getElementById(id);const legal=el&&el.classList.contains('legal');
+document.querySelector('main').style.display=legal?'none':'';
+document.querySelectorAll('.legal').forEach(x=>x.style.display=x===el?'block':'none');
+if(legal)scrollTo({top:0,behavior:'instant'});else if(el)el.scrollIntoView();}
+addEventListener('hashchange',route);route();
+const pick={was:'Kaffee',wann:'Freitagabend'};
+document.querySelectorAll('.chips').forEach(g=>g.addEventListener('click',e=>{
+const b=e.target.closest('button');if(!b)return;
+g.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));
+pick[g.dataset.k]=b.textContent;
+const t=pick.wann==='Freitagabend'?'am Freitagabend':'am '+pick.wann;
+document.getElementById('ticket').textContent=pick.was+' '+t;}));
+</script>
+</body>
+</html>
