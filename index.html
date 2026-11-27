@@ -2,8 +2,22 @@
 <html lang="de">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Flirtwerk – Aus Funken werden Dates</title>
+<meta name="description" content="Die Dating-App, die dich vom Bildschirm holt: wenige passende Menschen, ein gemeinsamer Plan und ein echtes Treffen. Ab 18.">
+<meta name="theme-color" content="#2A0E24">
+<meta name="color-scheme" content="dark light">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/icons/icon.svg" type="image/svg+xml">
+<link rel="icon" href="/icons/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Flirtwerk">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta property="og:title" content="Flirtwerk – Aus Funken werden Dates">
+<meta property="og:description" content="Wenige passende Menschen, ein gemeinsamer Plan und ein echtes Treffen.">
+<meta property="og:image" content="/icons/icon-512.png">
 <style>
 :root{--plum:#2A0E24;--plum2:#3D1835;--coral:#FF6B6B;--cream:#FFF3EA;--ink:#2A0E24;--soft:#E9CFDF}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -34,8 +48,17 @@ section{padding:64px 0}
 .hot{outline:3px solid var(--coral)}
 ul{padding-left:20px}
 details{border-bottom:1px solid #6A3A5E;padding:16px 0}summary{cursor:pointer;font-weight:700}
-footer{border-top:1px solid #6A3A5E;padding:32px 0;font-size:14px;color:var(--soft)}
+footer{border-top:1px solid #6A3A5E;padding:32px 0 calc(32px + env(safe-area-inset-bottom));font-size:14px;color:var(--soft)}
 .legal{display:none;max-width:760px}.legal h2{font-size:34px;overflow-wrap:anywhere;hyphens:auto}.legal h3{margin:24px 0 8px}.legal p,.legal li{margin-bottom:8px}.note{border:2px dashed var(--coral);border-radius:16px;padding:14px;margin-bottom:20px}footer nav{display:flex;flex-wrap:wrap;gap:4px 18px}footer a,.legal a{color:var(--cream);display:inline-block;padding:8px 0}
+header{padding-top:env(safe-area-inset-top)}
+.app{display:flex;flex-wrap:wrap;align-items:center;gap:24px}
+.app img{width:96px;height:96px;border-radius:22px;flex:none}
+.app>div{flex:1 1 300px}
+.app p{color:var(--soft);margin-bottom:16px}
+.steps{display:none;margin-top:16px;color:var(--soft)}
+.steps.on{display:block}
+.steps b{color:var(--cream)}
+@media (display-mode:standalone){#app{display:none}}
 </style>
 </head>
 <body>
@@ -72,6 +95,17 @@ footer{border-top:1px solid #6A3A5E;padding:32px 0;font-size:14px;color:var(--so
 <div class="card"><h3>Premium</h3><div class="price">19,99 €</div><p>pro Monat</p><ul><li>Alles aus Plus</li><li>Sehen, wer dich mag</li><li>Unsichtbar-Modus</li></ul></div>
 </div></div></section>
 
+<section id="app"><div class="w app">
+<img src="/icons/icon-192.png" alt="" width="96" height="96">
+<div><h2>Flirtwerk als App</h2>
+<p>Speicher Flirtwerk auf deinem Startbildschirm: startet wie eine App, im Vollbild und auch offline. Kein App-Store, kein Download, kein Konto.</p>
+<button class="btn" id="install" type="button">App installieren</button>
+<div class="steps" id="steps" aria-live="polite">
+<p id="ios"><b>iPhone und iPad:</b> In Safari unten auf „Teilen“ tippen, dann „Zum Home-Bildschirm“.</p>
+<p id="other"><b>Android:</b> Im Browsermenü (⋮) „App installieren“ oder „Zum Startbildschirm hinzufügen“ wählen.<br><b>Computer:</b> In Chrome oder Edge auf das Installieren-Symbol in der Adressleiste klicken.</p>
+</div></div>
+</div></section>
+
 <section><div class="w"><h2>Fragen</h2>
 <details><summary>Wann startet Flirtwerk?</summary><p>Geplant in ganz Deutschland. Der Starttermin wird noch bekannt gegeben.</p></details>
 <details><summary>Kann ich mich schon anmelden?</summary><p>Noch nicht. Die Anmeldung ist noch nicht freigeschaltet.</p></details>
@@ -80,7 +114,7 @@ footer{border-top:1px solid #6A3A5E;padding:32px 0;font-size:14px;color:var(--so
 </div></section>
 </main>
 <section class="legal w" id="impressum"><a href="#start">← Zur Startseite</a><h2>Impressum</h2><h3>Angaben gemäß § 5 DDG</h3><p>Jannick Bernatzki<br>Münzstraße 10<br>56068 Koblenz<br>Deutschland</p><h3>Kontakt</h3><p>E-Mail: jannick@fn.de</p><h3>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h3><p>Jannick Bernatzki</p><p>Stand: November 2026</p></section>
-<section class="legal w" id="datenschutz"><a href="#start">← Zur Startseite</a><h2>Datenschutz: Website</h2><div class="note"><b>Entwurf.</b> Vor der Veröffentlichung rechtlich prüfen.</div><h3>Verantwortlich</h3><p>Jannick Bernatzki, Münzstraße 10, 56068 Koblenz, jannick@fn.de</p><h3>Hosting durch Netlify</h3><p>Diese Website wird bei Netlify, Inc., 101 2nd Street, San Francisco, CA 94105, USA, gehostet (privacy@netlify.com). Beim Aufruf verarbeitet Netlify technische Daten wie IP-Adresse, Zeitpunkt, aufgerufene Adresse, verweisende Seite und Browserangaben, um die Website sicher auszuliefern. Rechtsgrundlage ist unser berechtigtes Interesse an einem sicheren und zuverlässigen Betrieb (Art. 6 Abs. 1 lit. f DSGVO).</p><p>Netlify ist auf Grundlage seiner Vereinbarung zur Auftragsverarbeitung (Art. 28 DSGVO) tätig. Dabei werden Daten in die USA übermittelt. Netlify gibt an, nach dem EU-U.S. Data Privacy Framework zertifiziert zu sein; ersatzweise gelten die EU-Standardvertragsklauseln.</p><p>Speicherdauer nach Angaben von Netlify: Zugriffsprotokolle 30 Tage direkt verfügbar und bis zu 13 Monate archiviert; Sicherheits- und Missbrauchsprotokolle 365 Tage direkt verfügbar und bis zu 6 Jahre archiviert. Mehr: <a href="https://www.netlify.com/privacy/">Datenschutzhinweise von Netlify</a>.</p><h3>Cookies und Analyse</h3><p>Der Code dieser Seite setzt keine Cookies, nutzt keine Analyse- oder Werbedienste und lädt keine externen Schriften.</p><h3>Kontakt per E-Mail</h3><p>Wir verarbeiten deine Angaben, um die Anfrage zu beantworten (Art. 6 Abs. 1 lit. b oder f DSGVO), und löschen sie, wenn sie nicht mehr benötigt werden und keine Aufbewahrungspflicht besteht.</p><h3>Deine Rechte</h3><p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch (Art. 15–21 DSGVO). Einwilligungen kannst du jederzeit für die Zukunft widerrufen. Du kannst dich bei einer Datenschutz-Aufsichtsbehörde beschweren (Art. 77 DSGVO).</p><p><a href="#app-datenschutz">Datenschutz der geplanten App</a></p><p>Stand: November 2026</p></section>
+<section class="legal w" id="datenschutz"><a href="#start">← Zur Startseite</a><h2>Datenschutz: Website</h2><div class="note"><b>Entwurf.</b> Vor der Veröffentlichung rechtlich prüfen.</div><h3>Verantwortlich</h3><p>Jannick Bernatzki, Münzstraße 10, 56068 Koblenz, jannick@fn.de</p><h3>Hosting durch Netlify</h3><p>Diese Website wird bei Netlify, Inc., 101 2nd Street, San Francisco, CA 94105, USA, gehostet (privacy@netlify.com). Beim Aufruf verarbeitet Netlify technische Daten wie IP-Adresse, Zeitpunkt, aufgerufene Adresse, verweisende Seite und Browserangaben, um die Website sicher auszuliefern. Rechtsgrundlage ist unser berechtigtes Interesse an einem sicheren und zuverlässigen Betrieb (Art. 6 Abs. 1 lit. f DSGVO).</p><p>Netlify ist auf Grundlage seiner Vereinbarung zur Auftragsverarbeitung (Art. 28 DSGVO) tätig. Dabei werden Daten in die USA übermittelt. Netlify gibt an, nach dem EU-U.S. Data Privacy Framework zertifiziert zu sein; ersatzweise gelten die EU-Standardvertragsklauseln.</p><p>Speicherdauer nach Angaben von Netlify: Zugriffsprotokolle 30 Tage direkt verfügbar und bis zu 13 Monate archiviert; Sicherheits- und Missbrauchsprotokolle 365 Tage direkt verfügbar und bis zu 6 Jahre archiviert. Mehr: <a href="https://www.netlify.com/privacy/">Datenschutzhinweise von Netlify</a>.</p><h3>Cookies und Analyse</h3><p>Der Code dieser Seite setzt keine Cookies, nutzt keine Analyse- oder Werbedienste und lädt keine externen Schriften.</p><h3>App-Funktion und Offline-Speicher</h3><p>Damit du die Seite als App installieren und offline öffnen kannst, speichert dein Browser eine Kopie der Seite und ihrer Symbole auf deinem Gerät (Service Worker und Browser-Speicher). Dabei werden keine personenbezogenen Daten gespeichert oder an uns übermittelt. Die Speicherung ist für diese von dir genutzte Funktion erforderlich (§ 25 Abs. 2 Nr. 2 TDDDG). Du kannst die Daten jederzeit in den Browser-Einstellungen löschen.</p><h3>Kontakt per E-Mail</h3><p>Wir verarbeiten deine Angaben, um die Anfrage zu beantworten (Art. 6 Abs. 1 lit. b oder f DSGVO), und löschen sie, wenn sie nicht mehr benötigt werden und keine Aufbewahrungspflicht besteht.</p><h3>Deine Rechte</h3><p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch (Art. 15–21 DSGVO). Einwilligungen kannst du jederzeit für die Zukunft widerrufen. Du kannst dich bei einer Datenschutz-Aufsichtsbehörde beschweren (Art. 77 DSGVO).</p><p><a href="#app-datenschutz">Datenschutz der geplanten App</a></p><p>Stand: November 2026</p></section>
 <section class="legal w" id="app-datenschutz"><a href="#start">← Zur Startseite</a><h2>Datenschutz: App (geplant)</h2><div class="note"><b>Entwurf.</b> Vor der Veröffentlichung rechtlich prüfen und offene [Felder] ergänzen.</div><p>Die App ist noch nicht verfügbar. Diese Angaben müssen zur fertigen Technik passen.</p><h3>Verantwortlich</h3><p>Jannick Bernatzki, Münzstraße 10, 56068 Koblenz, jannick@fn.de<br>Datenschutzbeauftragte Person: [Kontakt, falls Pflicht]</p><h3>Daten, Zwecke und Rechtsgrundlagen</h3><ul><li>Konto und Profil (E-Mail, Geburtsdatum, Fotos, Angaben): Vertrag, Art. 6 Abs. 1 lit. b</li><li>Sensible Angaben, etwa zu sexueller Orientierung, Religion oder Gesundheit: nur mit ausdrücklicher Einwilligung, Art. 9 Abs. 2 lit. a</li><li>Matches, Chats und Date-Pläne: Vertrag</li><li>Ungefährer Standort für Vorschläge: Einwilligung</li><li>Alters- und Foto-Prüfung, bei biometrischen Daten ausdrückliche Einwilligung: Anbieter [Name]</li><li>Betrugs- und Missbrauchsschutz, Meldungen: berechtigtes Interesse oder rechtliche Pflicht; für sensible Daten [Grundlage nach Art. 9 prüfen]</li><li>Zahlungen: Vertrag, Anbieter [Name]</li></ul><h3>Vorschläge</h3><p>Vorschläge werden automatisch anhand von Altersbereich, Entfernung, Interessen und Beziehungswunsch sortiert. Je mehr davon übereinstimmt, desto eher wird ein Profil vorgeschlagen.</p><h3>Empfänger</h3><p>Andere Mitglieder sehen deine Profilangaben. Dienstleister: [Hosting, E-Mail, Prüfung, Zahlung]. Drittländer und Garantien: [Angaben]. Wir verkaufen keine Daten und geben keine sensiblen Daten zu Werbezwecken weiter.</p><h3>Speicherdauer</h3><p>Konto und Chats: bis zur Kontolöschung. Prüfdaten: Löschung direkt nach der Prüfung. Meldungen: 6 Monate nach Abschluss. Rechnungen: gesetzliche Aufbewahrungsfristen.</p><h3>Deine Rechte</h3><p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch (Art. 15–21 DSGVO). Einwilligungen kannst du jederzeit für die Zukunft widerrufen. Du kannst dich bei einer Datenschutz-Aufsichtsbehörde beschweren (Art. 77 DSGVO).</p><p>Stand: November 2026</p></section>
 <section class="legal w" id="agb"><a href="#start">← Zur Startseite</a><h2>Allgemeine Geschäftsbedingungen</h2><div class="note"><b>Entwurf.</b> Vor der Veröffentlichung rechtlich prüfen.</div><h3>1. Anbieter und Geltung</h3><p>Diese Bedingungen gelten für die Nutzung von Flirtwerk, angeboten von Jannick Bernatzki, Münzstraße 10, 56068 Koblenz, in Deutschland.</p><h3>2. Teilnahme</h3><p>Nur volljährige Personen. Ein Konto je Person, mit wahren Angaben und eigenen Fotos. Zugangsdaten sind geheim zu halten.</p><h3>3. Leistung</h3><p>Flirtwerk vermittelt Kontakte. Ein Match, ein Treffen oder eine Beziehung wird nicht garantiert. Matches ohne Date-Plan schließen sich nach 7 Tagen.</p><h3>4. Abos</h3><p>Preise (inklusive gesetzlicher Steuern), Laufzeit und Verlängerung werden vor der Bestellung angezeigt. Plus: 9,99 € pro Monat, Premium: 19,99 € pro Monat. Abos laufen einen Monat, verlängern sich monatlich und sind jederzeit zum Ende des laufenden Monats kündbar.</p><h3>5. Verhalten und Inhalte</h3><p>Es gelten die <a href="#regeln">Community-Regeln</a>. Du behältst die Rechte an deinen Inhalten und erlaubst uns, sie zum Betrieb des Dienstes zu speichern und anzuzeigen.</p><h3>6. Sperren und Beschwerden</h3><p>Bei Verstößen können wir Inhalte entfernen oder Konten angemessen einschränken. Wir nennen den Grund, soweit rechtlich zulässig. Beschwerden an jannick@fn.de.</p><h3>7. Kündigung</h3><p>Du kannst dein Konto jederzeit löschen. Für Abos gilt <a href="#kuendigen">Kündigung</a>. Das Recht zur Kündigung aus wichtigem Grund bleibt unberührt.</p><h3>8. Haftung</h3><p>Wir haften unbeschränkt bei Vorsatz, grober Fahrlässigkeit und Verletzung von Leben, Körper oder Gesundheit. Bei leicht fahrlässiger Verletzung wesentlicher Vertragspflichten haften wir für den vorhersehbaren, typischen Schaden. Gesetzliche Haftung bleibt unberührt.</p><h3>9. Schluss</h3><p>Es gilt deutsches Recht. Zwingende Verbraucherschutzvorschriften bleiben unberührt.</p><p>Stand: November 2026</p></section>
 <section class="legal w" id="widerruf"><a href="#start">← Zur Startseite</a><h2>Widerrufsbelehrung</h2><div class="note"><b>Entwurf.</b> Vor der Veröffentlichung rechtlich prüfen und offene [Felder] ergänzen.</div><h3>Widerrufsrecht</h3><p>Du hast das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen. Die Frist beträgt vierzehn Tage ab Vertragsschluss.</p><p>Dazu musst du uns (Jannick Bernatzki, Münzstraße 10, 56068 Koblenz, jannick@fn.de) mit einer eindeutigen Erklärung informieren, z. B. per Brief oder E-Mail. Du kannst auch die Funktion „Vertrag widerrufen“ am Ende jeder Seite, sobald Verträge buchbar sind nutzen; wir bestätigen den Eingang unverzüglich per E-Mail. Zur Fristwahrung genügt die rechtzeitige Absendung.</p><h3>Folgen</h3><p>Wir erstatten alle erhaltenen Zahlungen unverzüglich, spätestens binnen vierzehn Tagen ab Eingang des Widerrufs, mit demselben Zahlungsmittel und ohne Entgelt. Hast du verlangt, dass die Leistung während der Frist beginnt, zahlst du einen angemessenen Anteil für die bis zum Widerruf erbrachte Leistung.</p><h3>Muster-Formular</h3><p>An Jannick Bernatzki, Münzstraße 10, 56068 Koblenz, jannick@fn.de: Hiermit widerrufe ich den Vertrag über [Leistung], bestellt am [Datum]. Name, Anschrift, Datum.</p><p><b>Aktuell können keine Verträge abgeschlossen werden.</b></p><p>Stand: November 2026</p></section>
@@ -101,6 +135,17 @@ g.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));
 pick[g.dataset.k]=b.textContent;
 const t=pick.wann==='Freitagabend'?'am Freitagabend':'am '+pick.wann;
 document.getElementById('ticket').textContent=pick.was+' '+t;}));
+// App: installierbar und offline
+if('serviceWorker' in navigator)addEventListener('load',()=>navigator.serviceWorker.register('/sw.js').catch(()=>{}));
+let deferred=null;
+const ib=document.getElementById('install'),steps=document.getElementById('steps');
+const isIOS=/iphone|ipad|ipod/i.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+document.getElementById(isIOS?'other':'ios').hidden=true;
+addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferred=e;});
+addEventListener('appinstalled',()=>{deferred=null;ib.textContent='Installiert ✓';ib.disabled=true;steps.classList.remove('on');});
+ib.addEventListener('click',async()=>{
+if(deferred){deferred.prompt();const r=await deferred.userChoice;deferred=null;if(r.outcome!=='accepted')steps.classList.add('on');}
+else steps.classList.add('on');});
 </script>
 </body>
 </html>

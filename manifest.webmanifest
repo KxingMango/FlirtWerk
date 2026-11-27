@@ -1,0 +1,24 @@
+{
+  "id": "/",
+  "name": "Flirtwerk – Aus Funken werden Dates",
+  "short_name": "Flirtwerk",
+  "description": "Die Dating-App, die dich vom Bildschirm holt: wenige passende Menschen, ein gemeinsamer Plan und ein echtes Treffen.",
+  "lang": "de",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#2A0E24",
+  "theme_color": "#2A0E24",
+  "categories": ["lifestyle", "social"],
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "/icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ],
+  "shortcuts": [
+    { "name": "Date bauen", "url": "/#bauen", "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }] }
+  ]
+}
